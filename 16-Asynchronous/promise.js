@@ -4,19 +4,13 @@
 a promise is a placeholder for a future result of an asynchronous operation
 */
 
+logCountryData("morocco");
 
-// let req = fetch("https://countries-api-836d.onrender.com/countries/morocco");
-// console.log(req);
-// setTimeout(() => console.log(req), 1000);
-
-
-getCountryData("morocco");
-
-
-function getCountryData(country) {
+function logCountryData(country) {
     const ret = fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((resp) => {
         return resp.json(); // this is also a promise
     })
-    .then((data) => console.log(data));
+    .then((data) => console.log(data[0]))
+    .catch(err => console.log(err));
 }
