@@ -12,5 +12,5 @@ function logCountryData(country) {
         return resp.json(); // this is also a promise
     })
     .then((data) => console.log(data[0]))
-    .catch(err => console.log(err));
+    .catch(err => console.log("Error:", err.message));
 }
