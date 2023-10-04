@@ -5,8 +5,6 @@ const $1337 = { lat: 32.882162410413294, lng: -6.897813811155632 }
 logGeoData($1337);
 
 
-
-
 async function logGeoData(pos) {
     try {
         let data = await fetch(makeUrl($1337));
@@ -29,5 +27,5 @@ async function logGeoData(pos) {
 }
 
 function makeUrl({lat, lng}) {
-    return `http://geocode.xyz/${lat},${lng}-6.897794140374616?geoit=json`
+    return `http://geocode.xyz/${lat},${lng}?geoit=json`;
 }
