@@ -7,7 +7,7 @@ logGeoData($1337);
 
 async function logGeoData(pos) {
     try {
-        let data = await fetch(makeUrl($1337));
+        let data = await fetch(makeUrl(pos));
     
         if (!data.ok) throw new Error(`cannot fetch data (${data.status})!`);
 
