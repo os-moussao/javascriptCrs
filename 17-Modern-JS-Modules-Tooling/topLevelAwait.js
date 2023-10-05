@@ -1,4 +1,4 @@
-// modules allow await works in top level code
+// modules allow await to work in top level code
 
 try {
     let [data] = await (await fetch("https://jsonplaceholder.typicode.com/posts")).json();
